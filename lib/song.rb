@@ -23,9 +23,11 @@ class Song
   
   def artist_name
    self.artist.name  
-  
+    if self.all.select {|song| song.artist.name != name}
+      return nil 
+    end 
   end 
-  
-  
-  
+
 end
+
+# Song.all.select {|song| song.artist == lil_nas_x}
