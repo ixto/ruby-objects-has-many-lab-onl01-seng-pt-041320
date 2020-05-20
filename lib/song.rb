@@ -22,7 +22,11 @@ class Song
   end
   
   def artist_name
-   self.artist.name 
+   if self.all.select {|song| self.artist == artist}
+     self.artist.name
+   else
+     return nil 
+   end  
  end 
 
 end
