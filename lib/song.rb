@@ -22,12 +22,8 @@ class Song
   end
   
   def artist_name
-   if self.all.select {|song| self.artist == artist}
-     self.artist.name
-   else
-     return nil 
-   end  
- end 
+    self.artist.name 
+  end 
 
 end
 
